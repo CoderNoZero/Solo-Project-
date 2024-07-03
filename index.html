@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.js"></script>
+    <script>
+        const radius = 100
+        let x,y
+        
+        function setup(){
+            createCanvas(windowWidth,windowHeight);
+            x = random(windowWidth);
+            y = random(windowHeight);
+        }
+        
+        function draw(){
+            background(220);
+            fill(255,0,255);
+            noStroke();
+            ellipse(x,y,radius*2,radius*2)
 
+        }
+        function mousePressed(){
+            mousePressed:
+            let d = dist(mouseX,mouseY,x,y)
+            if (d < radius){
+            x = random(windowWidth);
+            y = random(windowHeight);
+            }
+        }
+    </script>
+</body>
+</html>

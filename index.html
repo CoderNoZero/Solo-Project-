@@ -11,11 +11,15 @@
         const radius = 100
         let x,y
         let score = 0;
+        let r,g,b;
         
         function setup(){
             createCanvas(windowWidth,windowHeight);
             x = random(windowWidth);
             y = random(windowHeight);
+            r = random(255);
+            g = random(255);
+            b = random(255);
         }
         
         function draw(){
@@ -35,6 +39,9 @@
         function newCircle(){
             x = random(windowWidth);
             y = random(windowHeight);
+            r = random(255);
+            g = random(255);
+            b = random(255);
         }
         setInterval(newCircle, 1000);
     </script>
